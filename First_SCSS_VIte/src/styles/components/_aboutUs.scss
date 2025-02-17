@@ -1,0 +1,77 @@
+.aboutUsContainer {
+    border-radius: 1.25rem; /* 20px */
+    // width: 81.25rem; /* 1300px */
+    // margin: $spacer-height auto 0;
+    display: flex;
+    justify-content: center;
+    gap: 1.875rem; /* 30px */
+    border: 0.0625rem solid rgba(255, 255, 255, 0.15); /* 1px */
+    background: url('/src/assets/img/about-Us.png') no-repeat center center;
+    background-size: cover;
+    padding: 3.125rem 0; /* 50px */
+    box-sizing: border-box;
+    
+    /* Додаємо лінію через псевдоелемент ::after */
+    position: relative; /* Додаємо позиціонування для коректної роботи ::after */
+    
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: -0.0625rem; /* -1px */
+      left: 50%;
+      transform: translateX(-50%);
+      width: 99%;
+      height: 0.0625rem; /* 1px */
+      background: white;
+    }
+  
+    .LeftAboutUs {
+      width: 20%;
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      text-align: center;
+      color: transparent;
+      -webkit-text-stroke: 0.125rem white; /* 2px */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1.875rem; /* 30px */
+
+      font-family: $rotated-us-font-family;
+      font-weight: $rotated-us-font-weight;
+      font-size: $rotated-us-font-size;
+      line-height: $rotated-us-line-height;
+    }
+
+    .RigthAboutUs {
+      width: 46.875rem; /* 750px */
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem; /* 40px */
+
+      .about-us-title {
+        color: $base-title-color;
+        font-family: $about-us-title-font-family;
+        font-weight: $about-us-title-font-weight;
+        font-size: $about-us-title-font-size;
+        line-height: $about-us-title-line-height;
+      }
+
+      .about-us-info {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem; /* 20px */
+        .Description ul {
+          padding: 0;
+          margin: 0;
+          margin-left: 1.25rem; /* 20px */
+        }
+        
+        .Description li {
+          margin-bottom: 1.25rem; /* 20px */
+        }
+      }
+    }
+  }
+  

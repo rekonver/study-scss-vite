@@ -1,0 +1,156 @@
+.calculatorContainer{
+    background: $card-gradient;
+    border-radius: 1.25rem;
+    border: solid 1px $border-white;
+    display: flex;
+    justify-content: space-between;
+
+    padding: 1.25rem;
+    box-sizing: border-box;
+    backdrop-filter: blur(20px);
+}
+.input-button-container, .calc-title-count-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1.875rem;
+}
+
+.rightCalculator {
+    width: 46.875rem;
+    background-color: white;
+    border-radius: 0.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.75rem 1.25rem;
+    box-sizing: border-box;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 3.75rem;
+    width: 100%;
+    border-bottom: solid 1px black;
+}
+
+.item-start, .item-end {
+    display: flex;
+    align-items: center; /* Вирівнювання по вертикалі */
+    justify-content: center; /* Додатково для центрування тексту */
+    text-align: center;
+}
+
+.item-start {
+    height: 2.5625rem;
+    background-color: $cript_bg;
+    border-radius: 0.3125rem;
+    width: 5.375rem;
+    color: $cript_color;
+
+    font-family: $cript-font-family;
+    font-weight: $cript-font-weight;
+    font-size: $cript-font-size;
+    line-height: $cript-line-height;
+}
+
+.item-end {
+    height: 2.5625rem;
+    background-color: $cript_cof_bg;
+    border-radius: 0.3125rem;
+    width: 5.375rem;
+    color: $cript_cof_color;
+
+    font-family: $cript-cof-font-family;
+    font-weight: $cript-cof-font-weight;
+    font-size: $cript-cof-font-size;
+    line-height: $cript-cof-line-height;
+}
+
+.item-center {
+    margin-left: 12.5rem;
+
+    font-family: $cript-cof-font-family;
+    font-weight: $cript-cof-font-weight;
+    font-size: $cript-cof-font-size;
+    line-height: $cript-cof-line-height;
+}
+
+.leftCalculator {
+    margin-left: 1.25rem;
+    margin-top: 0.625rem;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column; /* Розташовуємо елементи в колонку */
+    justify-content: flex-start; /* Вирівнюємо елементи по вертикалі */
+    gap: 1.875rem; /* Відстань між елементами по вертикалі */
+}
+
+.calculator-title {
+    font-family: $calculator-title-font-family;
+    font-weight: $calculator-title-font-weight;
+    font-size: $calculator-title-font-size;
+    line-height: $calculator-title-line-height;
+    color: $base-title-color;
+    span {
+        color: $primary-highlight;
+    }
+}
+
+.left-calc-text-container {
+    padding: 0.75rem 1.4375rem 1.4375rem 1.4375rem;
+    box-sizing: border-box;
+    width: fit-content;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: $card-gradient;
+    border-radius: 0.625rem;
+    border: solid 1px $border-white;
+    div {
+        color: $base-description-color;
+        font-family: $give-money-font-family;
+        font-weight: $give-money-font-weight;
+        font-size: $give-money-font-size;
+        line-height: $give-money-line-height;
+    }
+
+    span {
+        margin-top: 0.75rem;
+        font-family: $calc-plus-font-family;
+        font-weight: $calc-plus-font-weight;
+        font-size: $calc-plus-font-size;
+        line-height: $calc-plus-line-height;
+        color: $primary-highlight;
+    }
+}
+
+.left-calc-input, .left-button {
+    height: 3.125rem;
+    width: 100%;
+    border: none;
+    border-radius: 0.625rem;
+    font-family: $calc-button-family;
+    font-weight: $calc-button-font-weight;
+    font-size: $calc-button-font-size;
+    line-height: $calc-button-line-height;
+}
+
+.left-calc-input {
+    font-size: 1rem;
+    padding-left: 1.25rem;
+    box-sizing: border-box;
+}
+
+.left-button {
+    background: $button-gradient;
+    color: $button-color-text;
+}
+

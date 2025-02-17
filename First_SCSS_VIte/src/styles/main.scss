@@ -1,0 +1,294 @@
+@import './variables.scss';
+@import './global.scss';
+@import './components/header.scss';
+@import './components/startBox';
+@import './components/ourDescribed';
+@import './components/calculator';
+@import './components/whyChoose';
+@import './components/regestrationForm';
+@import './components/video';
+@import './components/aboutUs';
+@import './components/footer.scss';
+
+
+
+body {
+    background-image: url('../assets/img/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+// html{
+//     font-size: 12px;
+// }
+
+@media screen and (min-width: 2000px){
+    html{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 1600px) {
+    html{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1440px) {
+    html{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 1024px) {
+    html{
+        font-size: 14px;
+    }
+    .aboutUsContainer,
+    .registrationContainer,
+    .StartBox,
+    .describedContainer,
+    .chooseContainer,
+    .calculatorContainer,
+    .videoContainer
+    {
+        width: 90%;
+    }
+    .StartBox{
+        flex-direction: column;
+        gap: 2rem;
+        .LeftStartBox{
+            width: 100%;
+            .ButtonsStartBox{
+                width: 100%;
+                .ButtonStartBoxLeft, .ButtonStartBoxRight{
+                    width: 100%;
+                } 
+            }
+        }
+        .RightStartBox{
+            width: 100%;
+            video{
+                width: 100%;
+            }
+            div{
+                width: 50%;
+                text-align: center;
+                margin: auto;
+            }
+        }
+    }
+    .aboutUsContainer{
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+    .chooseContainer{
+        .OptionRow{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            .Option{
+                margin: auto;
+                padding-bottom: 2rem;
+                box-sizing: border-box;
+                width: 40rem;
+            }
+        }
+    }
+    .leftCalculator{
+        gap: 1rem;
+        margin-right: 1.25rem;
+    }
+    .input-button-container, .calc-title-count-container{
+        gap: 1rem;
+    }
+    .item-center{
+        margin: 0;
+    }
+    .calculator-title{
+        line-height: 3rem;
+    }
+    .left-calc-text-container{
+        span{
+            font-size: 1.5rem;
+        }
+    }
+    .Rectangle{
+        height: 12rem;
+    }
+}
+@media screen and (max-width: 800px) {
+
+    .Title{
+        font-size: 3rem;
+    }
+    .aboutUsContainer{
+        .LeftAboutUs{
+            font-size: 9rem;
+        }
+    }
+    .calculatorContainer{
+        justify-content: center;
+        flex-direction: column;
+        .rightCalculator{
+            width: 100%;
+            margin-top: 1rem;
+        }
+        .leftCalculator{
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+            .input-button-container{
+                flex-direction: row;
+                gap: 0.75rem;
+            }
+            .calc-title-count-container{
+                flex-direction: row;
+                justify-content: space-between;
+                .calculator-title{
+                    width: 14rem;
+                    font-size: 2rem;
+                }
+            }
+            .left-calc-input,
+            .left-button {
+                width: 100%;
+
+            }
+        }
+    }
+    .RectangleRow{
+        display: flex;
+        flex-direction: column;
+        .Rectangle{
+            height: auto;
+        }
+    }
+}
+@media screen and (max-width: 700px) {
+
+    header{
+        .nav-links-PC {
+            display: none;
+        }
+        .nav-control-mobile{
+            display: flex;
+            justify-content: space-between; 
+            .mobileLogo{
+                width: 4rem;
+            }
+        }
+    }
+    footer{
+        .nav-links-PC {
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+            a{
+                font-size: 1.75rem;
+            }
+    
+            .logo {
+                order: -1; // Логотип переміщається вгору
+                width: 8rem;
+            }
+        }
+    }
+    .Title{
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
+    .StartBox{
+        margin-top: 2rem;
+        .RightStartBox{
+            div{
+                width: 18rem;
+            }
+        }
+    }
+    .registrationForm{
+        width: 100%;
+    }
+    .aboutUsContainer {
+        justify-content: center;
+        flex-direction: column;
+        .RigthAboutUs{
+            width: 100%;
+        }
+        .LeftAboutUs{
+            width: 100%;
+            font-size: 8rem;
+            line-height: 8rem;
+            writing-mode: horizontal-tb;
+            transform: rotate(0);
+        }
+    }
+    .chooseContainer{
+        .OptionRow{
+            .Option{
+                width: 30rem;
+            }
+        }
+    }
+}
+@media screen and (max-width: 540px) {
+
+    .Title{
+        font-size: 1.75rem;
+        line-height: 2rem;
+    }
+    .aboutUsContainer {
+        .LeftAboutUs{
+            font-size: 6.5rem;
+        }
+    }
+    .chooseContainer{
+        .OptionRow{
+            .Option{
+                width: 100%;
+                .OptionText{
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+    .calculatorContainer{
+        .leftCalculator{
+            .calc-title-count-container{
+                flex-direction: column;
+                align-items: center;
+                .calculator-title{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .ButtonsStartBox{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 420px) {
+    .aboutUsContainer {
+        .LeftAboutUs{
+            font-size: 4rem;
+            line-height: 3rem;
+        }
+    }
+    .rightCalculator{
+        .row{
+            div{
+                width: 3.75rem;
+                font-size: 0.8rem;
+            }
+        }
+    }
+    .OptionChoose{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .calculatorContainer{
+        .leftCalculator{
+            .input-button-container{
+                flex-direction: column;
+            }
+        }
+    }
+
+}

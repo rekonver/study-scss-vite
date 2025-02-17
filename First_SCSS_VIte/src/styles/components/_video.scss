@@ -1,0 +1,25 @@
+.videoContainer {
+  // width: $base-container-width;
+  // margin: $spacer-height auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem; // 12px / 16px = 0.75rem
+
+  .video {
+    flex: 1 1 calc(50% - 0.625rem); // Each video takes 50% width, minus half of the gap
+    margin-bottom: 1.25rem; // 20px / 16px = 1.25rem
+    video {
+      width: 100%;
+      height: auto;
+      border-radius: 0.625rem; // Optional for rounded corners
+    }
+  }
+
+  // Медіазапит для екранів менше 800px
+  @media (max-width: 800px) {
+    .video {
+      flex: 1 1 100%; // Задаємо відео на повну ширину екрана
+      margin-bottom: 1.25rem; // Відстань між відео в стовпчику
+    }
+  }
+}

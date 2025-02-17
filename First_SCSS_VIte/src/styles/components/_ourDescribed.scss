@@ -1,0 +1,48 @@
+.describedContainer{
+    // width: $base-container-width;
+    // margin: $spacer-height auto 0;
+    .Title, .Description{
+        text-align: center;
+    }
+    .Description{
+        margin-top: 1.875rem;
+        margin-bottom: 2.75rem;
+    }
+}
+.Rectangles .RectangleRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.Rectangle{
+    padding: 1.25rem;
+    box-sizing: border-box;
+    display: flex;
+    height: 7.5rem;
+    width: 100%;
+    background: $rectangle-gradient;
+    .Description{
+        margin-left: 1rem;
+        margin-right: 2rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-align: left;
+    }
+}
+.RectangleRow{
+    gap: 0.8125rem;
+}
+.RectangleRow{
+    margin-bottom: 20px;
+}
+.RectangleRow:last-child {
+    margin-bottom: 0;
+}
+.numderDescribed {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 4.375rem;
+    line-height: 3.75rem; 
+    letter-spacing: 0;
+  }

@@ -1,0 +1,56 @@
+#chooseDescription {
+  text-align: center;
+  margin-top: 3.125rem; // 50px / 16px = 3.125rem
+}
+
+.chooseContainer {
+  .Title {
+    text-align: center;
+    margin-bottom: 3.125rem; // 50px / 16px = 3.125rem
+  }
+
+  // width: $base-container-width;
+  // margin: $spacer-height auto 0;
+  
+  .OptionRow {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.8125rem; // 13px / 16px = 0.8125rem
+    
+    .Option {
+      flex: 1; // Makes options equally wide
+      display: flex;
+      flex-direction: column;
+      background: $regestration-bg-gradient;
+      border-radius: 1.25rem; // 20px / 16px = 1.25rem
+      border: solid 0.0625rem $border-white; // 1px / 16px = 0.0625rem
+      padding-left: 1.25rem; // 20px / 16px = 1.25rem
+      padding-top: 1.25rem; // 20px / 16px = 1.25rem
+      padding-right: 1.875rem; // 30px / 16px = 1.875rem
+      box-sizing: border-box;
+      height: 17.1875rem; // 275px / 16px = 17.1875rem
+    }
+  }
+}
+
+.OptionText {
+  color: $base-title-color;
+  font-family: $option-choose-title-font-family;
+  font-weight: $option-choose-title-font-weight;
+  font-size: $option-choose-title-font-size;
+  line-height: $option-choose-title-line-height;
+
+  display: flex;
+  align-items: center; /* Вирівнює текст по вертикалі */
+  justify-content: center; /* Якщо потрібно вирівняти по горизонталі */
+}
+
+.OptionChoose {
+  margin-bottom: 1.25rem; // 20px / 16px = 1.25rem
+  display: flex;
+  
+  img {
+    width: 5rem; // 80px / 16px = 5rem
+    margin-right: 0.3125rem; // 5px / 16px = 0.3125rem
+  }
+}

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimum-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="stylesheet" href="src/assets/media/Roboto/Roboto.css">
+  </head>
+  <body>
+    <header>
+      <div class="nav-links-PC">
+          <a href="#home-a">Главная</a>
+          <a href="#uslovia-a">Условия</a>
+          <img src="/src/assets/img/LOGO.svg" alt="Logo" class="logo" />
+          <a href="#why-us-a">Почему мы</a>
+          <a href="#about-us-a">О нас</a>
+      </div>
+
+      <div class="nav-control-mobile">
+        <img src="/src/assets/img/LOGO.svg" alt="Logo" class="mobileLogo" />
+        <button class="burger-menu" onclick="toggleMenu()">&#9776;</button>
+      </div>
+
+      <div class="burger-menu-container" id="burgerMenu">
+          <a class="Title" href="#home-a" onclick="closeMenu()">Главная</a>
+          <a class="Title" href="#uslovia-a" onclick="closeMenu()">Условия</a>
+          <a class="Title" href="#why-us-a" onclick="closeMenu()">Почему мы</a>
+          <a class="Title" href="#about-us-a" onclick="closeMenu()">О нас</a>
+      </div>
+  </header>
+  
+    <div id="home-a" class="StartBox">
+      <div class="LeftStartBox">
+        <div class="Title">
+          <span>Инвестиции</span> - ключ <br>
+          к новой жизни. Мы дадим <br>
+          все, что вам нужно!
+        </div>
+        <div class="DescriptionStartBox">Мечты не сбываются, если Вы не действуете</div>
+        <div class="ButtonsStartBox">
+            <button class="ButtonStartBoxLeft">Бесплатная консультация</button>
+            <button class="ButtonStartBoxRight">Смотреть видео отзывы</button>
+        </div>
+      </div>
+      <div class="RightStartBox">
+          <div class="TopContentStartBox">
+            Как выйти на пассивный <br>
+            доход в 4000$ с минимальными <br>
+            вложениями от 250$</div>
+          <video src="src/assets/media/feedback_1.mp4" controls></video>
+      </div>
+  </div>
+  <div id="uslovia-a" class="describedContainer">
+    <div class="Title">Наши <span>условия</span></div>
+    <div class="Description">ГЛАВНОЕ ПРАВИЛО - НИКАКИХ СДЕЛОК БЕЗ НАС <br><br>
+
+      Мы сотрудничаем с клиентами только на наших условиях.<br>
+      По-другому никак, самое ценное в наше время - это информация.</div>
+    <div class="Rectangles">
+      <div class="RectangleRow">
+        <div class="Rectangle">
+          <div class="numderDescribed">1</div>
+          <div class="Description">Вы торгуете только со своего личного инвестиционного счета на платформе, которую Вам порекомендует наш специалист. Мы работаем в команде, а потому не можем гарантировать сторонние платформы</div>
+        </div>
+        <div class="Rectangle">
+          <div class="numderDescribed">2</div>
+          <div class="Description">Мы зарабатываем с Вашей чистой прибыли, потому мы заинтересованы в Вашем доходе. Мы получаем 20% раз в месяц, Вы никогда не оплачиваете наши услуги наперед.</div>
+        </div>
+      </div>
+      <div class="RectangleRow">
+        <div class="Rectangle">
+          <div class="numderDescribed">3</div>
+          <div class="Description">Вы торгуете только со своего личного инвестиционного счета на платформе, которую Вам порекомендует наш специалист. Мы работаем в команде, а потому не можем гарантировать сторонние платформы</div>
+        </div>
+        <div class="Rectangle">
+          <div class="numderDescribed">4</div>
+          <div class="Description">Минимальная сумма , с которой Вы можете приступить к работе с нашим специалистом составляет 300$. Да, для кого-то это не маленькие деньги, но мы с Вами должны прийти к результату, а для этого нужно диверсифицировать все риски и правильно инвестировать хотя бы в 5-10 разных активов.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="calculatorContainer">
+
+    <div class="leftCalculator">
+      <div class="calc-title-count-container">
+        <div class="calculator-title">
+            Калькулятор
+            <span>доходности</span>
+        </div>
+        <div class="left-calc-text-container">
+            <div>Вы заработаете</div>
+            <span>+ 0,0$</span>
+        </div>
+      </div>
+
+      <div class="input-button-container">
+        <input id="price-number-mask" class="left-calc-input" type="text" placeholder="Введіть значення">
+        <button class="left-button" onclick="calculateEarnings()">Обчислити</button>
+    </div>
+  </div>
+  
+    <div class="rightCalculator">
+      <div class="row">
+          <div class="item item-start">BTC</div>
+          <div class="item item-center">+0.00$</div>
+          <div class="item item-end"  data-percent="20.7">+22.7%</div>
+      </div>
+      <div class="row">
+          <div class="item item-start">ETH</div>
+          <div class="item item-center">+0.00$</div>
+          <div class="item item-end"  data-percent="22.7">+22.7%</div>
+      </div>
+      <div class="row">
+          <div class="item item-start">SOL</div>
+          <div class="item item-center">+0.00$</div>
+          <div class="item item-end"  data-percent="22.7">+22.7%</div>
+      </div>
+      <div class="row">
+          <div class="item item-start">BNB</div>
+          <div class="item item-center">+0.00$</div>
+          <div class="item item-end"  data-percent="22.7">+22.7%</div>
+      </div>
+      <div class="row">
+          <div class="item item-start">TON</div>
+          <div class="item item-center">+0.00$</div>
+          <div class="item item-end" data-percent="22.7">+22.7%</div>
+      </div>
+  </div>
+  
+  </div>
+  
+  <div id="why-us-a" class="chooseContainer">
+    <div class="Title">Почему нас выбирают:</div>
+    <div class="OptionRow">
+      <div class="Option">
+        <div class="OptionChoose">
+          <img src="src/assets/img/fire.png" alt="Option 1">
+          <div class="OptionText">Персонализированный 
+            подход</div>
+        </div>
+
+        <div class="Description">Мы понимаем как сложно открывать для себя новые направления дополнительного дохода в любом направлении, а тем более в сфере инвестиций. Каждый клиент получает индивидуальный подход и стратегию по достижению индивидуальных финансовых целей.</div>
+      </div>
+      <div class="Option">
+        <div class="OptionChoose">        
+          <img src="src/assets/img/light.png" alt="Option 2">
+          <div class="OptionText">Экспертиза в области 
+            инвестиции</div>
+          </div> 
+
+        <div class="Description">Наша команда состоит из профессионалов в сфере инвестиций. Наши специалисты постоянно обучаются у лучших экспертов в данном направлении. Так же у каждого специалиста есть свои каналы и источники информации, которые уже помогли ни одной сотни наших клиентов заработать и развиваться в данной сфере.</div>
+      </div>
+      <div class="Option">
+        <div class="OptionChoose">        
+          <img src="src/assets/img/medal.png" alt="Option 3">
+          <div class="OptionText">Гарантии Вашего 
+            успеха вместе с нами</div>
+        </div>
+        <div class="Description">Мы ценим долгосрочные и доверительные отношения с нашими клиентами. Именно по этому мы всегда настоятельно рекомендуем торговать со своего торгового счета, но под наблюдением специалиста. Мы никогда не просим оплату наших услуг наперед. Ведь наш доход, мы получаем раз в месяц от суммы Вашей чистой прибыли.</div>
+      </div>
+    </div>
+      <!-- Доданий новий блок -->
+  <div class="Description" id="chooseDescription">
+    Мы стремимся к сотрудничеству, основанному на взаимном доверии и уважении. <br>
+    Выбирая нас, вы получаете не просто делового партнера, а надежного делового партнера и наставника, <br>
+    готового поддержать и подсказать на каждом этапе инвестиционного пути.
+  </div>
+  </div>
+
+  <div class="registrationContainer">
+    <div class="Title">Зарегистрируйтесь прямо сейчас <br>
+      и получите <span>бесплатную консультацию!</span>
+    </div>
+
+    <div class="registrationForm">
+      <input type="text" class="formInput" placeholder="Имя">
+      <input type="text" class="formInput" placeholder="Фамилия">
+      <input type="email" class="formInput" placeholder="Почта">
+      <input type="tel" class="formInput" placeholder="Номер">
+      <button class="formButton">Зарегистрироваться</button>
+    </div>
+  </div>
+
+  <div class="videoContainer">
+    <div class="video">
+      <video src="src/assets/media/feedback_1.mp4" controls></video>
+    </div>
+    <div class="video">
+      <video src="src/assets/media/feedback_2.mp4" controls></video>
+    </div>
+    <div class="video">
+      <video src="src/assets/media/feedback_3.mp4" controls></video>
+    </div>
+    <div class="video">
+      <video src="src/assets/media/feedback_4.mp4" controls></video>
+    </div>
+  </div>
+
+      <div id="about-us-a" class="aboutUsContainer">
+
+          <div class="LeftAboutUs">
+            О НАС
+          </div>
+          <div class="RigthAboutUs">
+            <div class="about-us-info">
+              <div class="about-us-title">История компании:</div>
+              <div class="Description">Начав свою деятельность 20 лет назад, у нас не было доступа к информации о данной сфере. Мы с помощью сотни проб и ошибок пришли к тому, что таких людей как мы очень много и им всем нужна помощь. И вот 5 лет назад мы приняли решение расширять свои горизонты. Мы объединили сотни инвесторов-профессионалов и простых людей, которые хотят развиваться, стремящихся изменить свою жизнь.</div>
+            </div>
+            <div class="about-us-info">
+              <div class="about-us-title">Миссия:</div>
+              <div class="Description">Мы нацелены на то, чтобы помогать простым людям открывать новые возможности, улучшать качество жизни и уровень дохода. Мы стремимся сделать жизнь наших клиентов лучше.
+                Ценности:</div>
+            </div>
+            <div class="about-us-info">
+              <div class="about-us-title">Ценности:</div>
+              <div class="Description">
+                <ul>
+                  <li>Профессионализм: Наша команда объединяет лучших экспертов в области инвестиций, готовых решать самые сложные задачи.</li>
+                  <li>Честность: Мы строим отношения с нашими клиентами на взаимном доверии и уважении.</li>
+                  <li>Качество: Нам важно не просто предоставлять услуги, но делать это на высшем уровне, превосходя ожидания наших клиентов.</li>
+                </ul>
+              </div>
+              
+          </div>
+        </div>
+
+    </div>
+
+    <footer>
+      <div class="nav-links-PC">
+        <a href="#home-a">Главная</a>
+        <a href="#uslovia-a">Условия</a>
+        <img src="/src/assets/img/LOGO.svg" alt="Logo" class="logo" />
+        <a href="#why-us-a">Почему мы</a>
+        <a href="#about-us-a">О нас</a>
+      </div>
+    </footer>
+<!-- 
+    <script src="src/js/calculator.js"></script>
+    <script src="src/js/burger-menu.js"></script> -->
+    <script type="module" src="/src//js/main.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+  </body>
+</html>

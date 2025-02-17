@@ -1,0 +1,58 @@
+.registrationContainer {
+    .Title {
+      text-align: center;
+      margin-bottom: 3.125rem; /* 50px / 16px = 3.125rem */
+    }
+  }
+  
+  .registrationForm {
+    backdrop-filter: blur(30px);
+  
+    padding: 1.875rem; /* 30px / 16px = 1.875rem */
+    box-sizing: border-box;
+    background: $card-gradient;
+    border-radius: 2rem; /* 32px / 16px = 2rem */
+    border: solid 0.0625rem $border-white; /* 1px / 16px = 0.0625rem */
+    margin: 3.125rem auto 0;
+    width: 40rem; /* 640px / 16px = 40rem */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* 16px / 16px = 1rem */
+  
+    .formInput {
+      color: white;
+      width: 100%;
+      height: 3.125rem; /* 50px / 16px = 3.125rem */
+      padding: 0 1.25rem; /* 20px / 16px = 1.25rem */
+      border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
+      border: solid 0.0625rem $border-input-color; /* 1px / 16px = 0.0625rem */
+      background: #00000099;
+      box-sizing: border-box;
+      font-size: 1rem; /* 16px / 16px = 1rem */
+    }
+    .formInput::placeholder{
+      color: #FFFFFF; /* або 'white', якщо ви хочете використовувати назву кольору */
+      opacity: 1; /* Для Firefox, який використовує opacity для плейсхолдерів */
+    }
+  
+    .formButton {
+      width: 100%;
+      height: 3.125rem; /* 50px / 16px = 3.125rem */
+      border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
+      background: $button-gradient;
+  
+      font-family: $calc-button-family;
+      font-weight: $calc-button-font-weight;
+      font-size: $calc-button-font-size;
+      line-height: $calc-button-line-height;
+  
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #00C4C2;
+      }
+    }
+  }
+  

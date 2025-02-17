@@ -1,0 +1,28 @@
+.Title {
+    font-family: $font-family-title;
+    font-weight: $font-weight-title;
+    font-size: $font-size-title;
+    line-height: $line-height-title;
+    color: $base-title-color;
+}
+.Title span{
+    color: $primary-highlight;
+}
+.Description {
+    font-family: $font-family-description;
+    font-weight: $font-weight-description;
+    font-size: $font-size-description;
+    line-height: $line-height-description;
+    color: $base-description-color;
+}
+.aboutUsContainer,
+.registrationContainer,
+.StartBox,
+.describedContainer,
+.chooseContainer,
+.calculatorContainer,
+.videoContainer
+{
+    margin: $spacer-height auto 0;
+    width: $base-container-width;
+}

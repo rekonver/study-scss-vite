@@ -1,0 +1,32 @@
+footer {
+    margin-top: $spacer-height;
+    margin-bottom: $spacer-height;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav-links-PC {
+    width: $header-nav-width;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+  
+  .nav-links-PC a {
+    text-decoration: none;
+    color: $primary-text-color;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.465rem;
+    letter-spacing: 0rem;
+  }
+  
+  .logo {
+    width: 6rem;
+    font-weight: bold;
+  }
+  
